@@ -34,10 +34,12 @@ document.getElementById('template').addEventListener('change', (e) => {
     card.className = `card ${e.target.value}`;
 });
 
-// Función para descargar la tarjeta como PNG
+// Función para descargar la tarjeta como PNG y PDF
 document.getElementById('download-btn').addEventListener('click', () => {
+    const preview = document.getElementById('card-preview');
+    
     // Descargar como imagen (PNG)
-    html2canvas(document.getElementById('card-preview')).then((canvas) => {
+    html2canvas(preview).then((canvas) => {
         const link = document.createElement('a');
         link.download = 'tarjeta.png';
         link.href = canvas.toDataURL();
@@ -45,7 +47,6 @@ document.getElementById('download-btn').addEventListener('click', () => {
     });
 
     // Descargar como PDF
-    const preview = document.getElementById('card-preview');
     const pdf = new jsPDF(); // Crear un nuevo documento PDF
     pdf.html(preview, {
         callback: (doc) => {
