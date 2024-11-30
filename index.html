@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tarjetas de Presentación</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Tarjetas de Presentación</h1>
+        <div class="editor">
+            <label>Fuente: 
+                <select id="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                    <option value="'Courier New', monospace">Courier New</option>
+                    <option value="'Comic Sans MS', cursive">Comic Sans</option>
+                </select>
+            </label>
+            <label>Plantilla: 
+                <select id="template">
+                    <option value="default">Predeterminada</option>
+                    <option value="template1">Moderna</option>
+                    <option value="template2">Minimalista</option>
+                </select>
+            </label>
+            
+            <h2>Personaliza tu tarjeta</h2>
+            <label>Nombre: <input type="text" id="name" placeholder="Ej. Juan Pérez"></label>
+            <label>Título: <input type="text" id="title" placeholder="Ej. Desarrollador Web"></label>
+            <label>Teléfono: <input type="text" id="phone" placeholder="Ej. +54 123 456 789"></label>
+            <label>Email: <input type="text" id="email" placeholder="Ej. correo@ejemplo.com"></label>
+            <label>Color de Fondo: <input type="color" id="bg-color" value="#ffffff"></label>
+            <button id="download-btn">Descargar</button>
+        </div>
+        <div class="preview">
+            <h2>Vista previa</h2>
+            <div class="card" id="card-preview">
+                <h3 id="preview-name">Juan Pérez</h3>
+                <p id="preview-title">Desarrollador Web</p>
+                <p id="preview-phone">+54 123 456 789</p>
+                <p id="preview-email">correo@ejemplo.com</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
