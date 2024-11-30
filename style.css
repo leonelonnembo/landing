@@ -32,7 +32,7 @@ label {
     margin-bottom: 10px;
 }
 
-input {
+input, select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -55,6 +55,7 @@ button:hover {
 
 .card {
     background: #f4f4f9;
+    color: #000;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -70,24 +71,19 @@ button:hover {
     margin: 5px 0;
     font-size: 16px;
 }
-.card {
-    font-family: Arial, sans-serif; /* Valor inicial */
-}
-/* Plantilla predeterminada */
+
+/* Plantillas */
 .card.default {
     background-color: #f4f4f9;
     color: #000;
-    border: 1px solid #ddd;
 }
 
-/* Plantilla moderna */
 .card.template1 {
     background-color: #1d3557;
     color: #fff;
     border: none;
 }
 
-/* Plantilla minimalista */
 .card.template2 {
     background-color: #eaeaea;
     color: #333;

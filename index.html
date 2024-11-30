@@ -6,12 +6,17 @@
     <title>Generador de Tarjetas de Presentación</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
 </head>
 <body>
     <div class="container">
         <h1>Generador de Tarjetas de Presentación</h1>
         <div class="editor">
+            <h2>Personaliza tu tarjeta</h2>
+            <label>Nombre: <input type="text" id="name" placeholder="Ej. Juan Pérez"></label>
+            <label>Título: <input type="text" id="title" placeholder="Ej. Desarrollador Web"></label>
+            <label>Teléfono: <input type="text" id="phone" placeholder="Ej. +54 123 456 789"></label>
+            <label>Email: <input type="text" id="email" placeholder="Ej. correo@ejemplo.com"></label>
+            <label>Color de Fondo: <input type="color" id="bg-color" value="#ffffff"></label>
             <label>Fuente: 
                 <select id="font-family">
                     <option value="Arial">Arial</option>
@@ -27,13 +32,6 @@
                     <option value="template2">Minimalista</option>
                 </select>
             </label>
-            
-            <h2>Personaliza tu tarjeta</h2>
-            <label>Nombre: <input type="text" id="name" placeholder="Ej. Juan Pérez"></label>
-            <label>Título: <input type="text" id="title" placeholder="Ej. Desarrollador Web"></label>
-            <label>Teléfono: <input type="text" id="phone" placeholder="Ej. +54 123 456 789"></label>
-            <label>Email: <input type="text" id="email" placeholder="Ej. correo@ejemplo.com"></label>
-            <label>Color de Fondo: <input type="color" id="bg-color" value="#ffffff"></label>
             <button id="download-btn">Descargar</button>
         </div>
         <div class="preview">
